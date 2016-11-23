@@ -5,7 +5,7 @@ class Question < ApplicationRecord
   belongs_to :user, class_name: User.name
   belongs_to :subject, class_name: Subject.name
 
-  validate :content, presence: true, length: {maximum: Settings.content_size_max}
+  validates :content, presence: true, length: {maximum: Settings.content_size_max}
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|attributes| attributes["content"].blank?}
 end
