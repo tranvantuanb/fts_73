@@ -85,6 +85,8 @@ GEM
       shellany (~> 0.0)
       thor (>= 0.18.1)
     i18n (0.7.0)
+    i18n-js (3.0.0.rc14)
+      i18n (~> 0.6, >= 0.6.6)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -199,6 +201,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.11)
   bootstrap-sass (= 3.3.6)
   byebug
   coffee-rails (~> 4.2)
@@ -206,6 +209,7 @@ DEPENDENCIES
   devise
   font-awesome-sass (~> 4.7.0)
   guard
+  i18n-js (>= 3.0.0.rc11)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

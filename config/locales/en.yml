@@ -58,6 +58,9 @@ en:
       author: "Bui Quy Hoat & Tran Van Tuan"
       the: "The"
       by: "by"
+    admin:
+      admin: "Admin"
+      page: "Page"
   static_pages:
     contact:
       mail_us: "Mail us"
@@ -74,3 +77,18 @@ en:
       help: "Help"
     about:
       about: "About"
+  admin:
+    questions:
+      index:
+        show_questions: "Show questions"
+        list_questions: "List Of Questions"
+      questions:
+        id: "ID"
+        subject: "Subject"
+        content: "Content"
+        user_id: "User ID"
+        user_name: "User Name"
+        v_v: "..."
+  shared:
+    search_questions:
+      enter_content_question: "Enter question content"

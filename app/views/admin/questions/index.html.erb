@@ -1,0 +1,18 @@
+<div class="col-md-12 admin-question">
+  <div class="row">
+    <div class="col-md-4">
+      <%= select_tag :subject, options_for_select(@subjects.collect {|c|
+        [c.name, c.id]}), {class: "btn subject", id: "subject_select",
+        include_blank: t(".subjects")}%>
+    </div>
+  </div>
+  <div class="pull-right btn-add-question">
+    <%= link_to "", new_admin_question_path,
+      class: "fa fa-plus btn btn-default" %>
+  </div>
+  <h2 class="text-left"><%= t ".list_questions" %></h2>
+  <div id="table-questions">
+    <%= render partial: "/admin/questions/questions",
+      locals: {questions: @questions} %>
+  </div>
+</div
