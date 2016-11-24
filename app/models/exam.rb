@@ -3,5 +3,5 @@ class Exam < ApplicationRecord
   belongs_to :subject, class_name: Subject.name
   has_many :results, class_name: Result.name, dependent: :destroy
 
-  validate :status, presence: true
+  validates :status, presence: true
 end
