@@ -92,3 +92,11 @@ en:
   shared:
     search_questions:
       enter_content_question: "Enter question content"
+  exams:
+    index:
+      create_exam: "Create exam"
+      list_exams: "List Of Exam"
+      start: "Start"
+      view: "View"
+    create:
+      create_exam_successful: "Create exam successful!"
