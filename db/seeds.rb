@@ -67,7 +67,7 @@ end
     user_id: 1,
     subject_id: n,
     status: 0,
-    spent_time: "00:#{n}:n")
+    spent_time: 0)
 end
 
 (1..3).each do |n|
@@ -75,7 +75,7 @@ end
     user_id: 1,
     subject_id: n,
     status: 1,
-    spent_time: "00:#{n + 1}:n")
+    spent_time: 0)
 end
 
 (1..3).each do |n|
@@ -83,7 +83,7 @@ end
     user_id: 1,
     subject_id: n,
     status: 2,
-    spent_time: "00:#{n + 2}:n")
+    spent_time: 0)
 end
 
 (1..3).each do |n|
@@ -91,7 +91,7 @@ end
     user_id: 1,
     subject_id: n,
     status: 3,
-    spent_time: "00:#{n + 3}:n")
+    spent_time: 0)
 end
 
 Question.all.each do |question|

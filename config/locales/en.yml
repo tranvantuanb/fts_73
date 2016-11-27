@@ -55,22 +55,13 @@ en:
       signup: "Sign up"
     footer:
       f_exam: "F-Exam"
-      author: "Bui Quy Hoat & Tran Van Tuan"
+      author: "Tran Van Tuan"
       the: "The"
       by: "by"
     admin:
       admin: "Admin"
       page: "Page"
   static_pages:
-    contact:
-      mail_us: "Mail us"
-      address: "Address"
-      phone: "Phone"
-      email: "Email"
-      e_mail: "E-mail : "
-      detail_email: "f-shop@gmail.com"
-      detail_phone: "+84 1994 1994"
-      detail_address: "25T2 - Hoang Dao Thuy Stress, Ha Noi City"
     home:
       home: "Home"
     help:
@@ -98,5 +89,20 @@ en:
       list_exams: "List Of Exam"
       start: "Start"
       view: "View"
+      require_login: "You have to login first!"
+      colon: ":"
+      zero: "0"
     create:
       create_exam_successful: "Create exam successful!"
+    show:
+      hours: "Hours"
+      minutes: "Minutes"
+      seconds: "Seconds"
+      time_remaining: "Time remaining:"
+      finish: "Finish"
+      are_you_sure: "Are you sure?"
+  one_thousand: 1000
+  sixty: 60
+  twenty_four: 24
+  negative_two: -2
+  ten: 10
