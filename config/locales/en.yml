@@ -107,6 +107,7 @@ en:
         user_name: "User Name"
         colon: ":"
         zero: "0"
+        view: "View"
       show:
         finish: "Submit"
   shared:

@@ -18,6 +18,9 @@ gem "bcrypt", "3.1.11"
 gem "cancancan"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "sidekiq"
+gem "letter_opener"
+gem "launchy"
 
 group :development, :test do
   gem "byebug", platform: :mri

@@ -14,6 +14,7 @@ class Admin::ExamsController < ApplicationController
     params[:score] = @exam.caculate_score
     params[:status] = :checked
     if @exam.update_attributes exam_params
+      ResultWorker.perform_async @exam.id
       redirect_to admin_exams_path
     else
       flash[:danger] = t(".update_faild")
