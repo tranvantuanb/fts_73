@@ -16,6 +16,8 @@ gem "devise"
 gem "i18n-js", ">= 3.0.0.rc11"
 gem "bcrypt", "3.1.11"
 gem "cancancan"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 
 group :development, :test do
   gem "byebug", platform: :mri

@@ -61,6 +61,12 @@ en:
     admin:
       admin: "Admin"
       page: "Page"
+      dashboard: "Dashboard"
+      list_exams: "List Exams"
+      question_bank: "Question Bank"
+      suggestions: "Suggestions"
+      users: "Users"
+      subjects: "Subjects"
   static_pages:
     home:
       home: "Home"
@@ -80,6 +86,29 @@ en:
         user_id: "User ID"
         user_name: "User Name"
         v_v: "..."
+      exams:
+      index:
+        create_exam: "Create exam"
+        list_exams: "List Of Exam"
+        start: "Start"
+        view: "View"
+        require_login: "You have to login first!"
+        colon: ":"
+        zero: "0"
+    exams:
+      index:
+        list_exams: "List Exams"
+        created_date: "Created Date"
+        subject: "Subject"
+        status: "Status"
+        duration: "Duration"
+        question_number: "Question Number"
+        spent_time: "Spent Time"
+        user_name: "User Name"
+        colon: ":"
+        zero: "0"
+      show:
+        finish: "Submit"
   shared:
     search_questions:
       enter_content_question: "Enter question content"
@@ -92,6 +121,8 @@ en:
       require_login: "You have to login first!"
       colon: ":"
       zero: "0"
+      no_score: "-"
+      slash: "/"
     create:
       create_exam_successful: "Create exam successful!"
     show:

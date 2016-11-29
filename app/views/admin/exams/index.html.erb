@@ -1,0 +1,42 @@
+<div class="col-md-12 admin-exams">
+
+  <h2 class="text-left"><%= t ".list_exams" %></h2>
+  <div id="table-exams">
+    <table class="cart table table-hover new-order">
+      <thead>
+        <tr class="info row">
+          <th class="col-md-2"><%= t ".created_date" %></th>
+          <th class="col-md-2"><%= t ".subject" %></th>
+          <th class="col-md-1"><%= t ".status" %></th>
+          <th class="col-md-1"><%= t ".duration" %></th>
+          <th class="col-md-1"><%= t ".question_number" %></th>
+          <th class="col-md-1"><%= t ".spent_time" %></th>
+          <th class="col-md-2"><%= t ".user_name" %></th>
+          <th class="col-md-2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @exams.each do |exam| %>
+          <tr class="row">
+            <td class="col-md-2"><%= exam.created_at.strftime(Settings.format_date) %></td>
+            <td class="col-md-2"><%= exam.subject.name %></td>
+            <td class="col-md-1"><%= exam.status %></td>
+            <td class="col-md-1"><%= exam.subject.duration %></td>
+            <td class="col-md-1"><%= exam.subject.question_number %></td>
+            <td class="col-md-1">
+              <%= format_spent_time exam.spent_time %>
+            </td>
+            <td class="col-md-2"><%= exam.user.name %></td>
+            <th class="col-md-2 option-product-admin">
+              <%= link_to admin_exam_path(exam),
+                class: "btn btn-default button-1" do %>
+                  <i class="fa fa-eye"><%= t(".view") %></i>
+                <% end %>
+            </th>
+          </tr>
+        <% end %>
+        <%= paginate @exams %>
+      </tbody>
+    </table>
+  </div>
+</div
