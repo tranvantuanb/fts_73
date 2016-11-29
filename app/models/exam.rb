@@ -8,6 +8,17 @@ class Exam < ApplicationRecord
   accepts_nested_attributes_for :results
 
   after_create :create_result
+  paginates_per 10
+
+   def caculate_score
+    score = 0
+    self.results.each do |result|
+      unless result.answer.nil?
+        score += 1 if result.answer.is_correct?
+      end
+    end
+    score
+  end
 
   private
   def create_result

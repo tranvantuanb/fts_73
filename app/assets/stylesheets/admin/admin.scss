@@ -260,3 +260,14 @@ select#subject_select:hover {
 .col-md-8.text-search {
   position: relative;
 }
+
+ul {
+  list-style: none;
+  li {
+
+  }
+}
+
+label.radio-inline-correct {
+  background-color: $green_high;
+}

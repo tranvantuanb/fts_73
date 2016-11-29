@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "registrations"}
-  root "static_pages#home"
+  root "exams#index"
 
   namespace :admin do
     root "home#index"
-    resources :subjects, :questions, :users
+    resources :subjects, :questions, :users, :exams
     resources :statistic
   end
 

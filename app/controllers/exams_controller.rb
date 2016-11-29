@@ -5,7 +5,7 @@ class ExamsController < ApplicationController
 
   def index
     @subjects = Subject.all
-    @exams = current_user.exams.order(created_at: :desc)
+    @exams = current_user.exams.order(created_at: :desc).page params[:page]
     @exam = Exam.new
   end
 
