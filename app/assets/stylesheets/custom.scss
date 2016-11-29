@@ -11,3 +11,45 @@ footer.footer{
   padding-bottom: 15px;
   font-size: 12px;
 }
+
+ul {
+  list-style: none;
+  li {
+
+  }
+}
+
+div#timer {
+  position: fixed;
+  right: 0;
+  width: 150px;
+  border: 3px solid $green_high;
+  background-color: khaki;
+  padding-left: 8px;
+  top: 50px;
+  margin-right: 17px;
+  margin-top: 69px;;
+}
+
+.question-answer {
+  border: 2px solid $orange_high;
+  background-color: ghostwhite;
+  padding: 10px 20px 20px 20px;
+}
+
+input#btn_finish {
+  border: 1px solid $yellow_slight;
+  font-size: 12px;
+  font-weight: 900;
+  width: 100px;
+  height: 35px;
+  position: fixed;
+  right: 300px;
+  bottom: 49px;
+  position: fixed;
+}
+
+input#btn_finish:hover{
+  background: $dark-blue;
+  color: white;
+}

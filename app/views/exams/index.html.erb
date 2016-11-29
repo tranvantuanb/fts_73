@@ -1,10 +1,10 @@
 <div class="col-md-12 admin-question">
   <div class="row">
     <div class="col-md-4">
-      <%= form_tag exams_path do %>
-        <%= select_tag :subject_id, options_for_select(@subjects.collect {|c|
+      <%= form_for @exam do |f| %>
+        <%= f.select :subject_id, options_for_select(@subjects.collect {|c|
           [c.name, c.id]}), {class: "btn subject", id: "exam-select-subject"}%>
-        <%= submit_tag t(".create_exam"), class: "btn btn-default" %>
+        <%= f.submit t(".create_exam"), class: "btn btn-default" %>
       <% end %>
     </div>
   </div>
@@ -26,27 +26,29 @@
       <tbody>
         <% @exams.each do |exam|%>
           <tr class="row">
-            <td class="col-md-2"><%= exam.created_at %></td>
+            <td class="col-md-2"><%= exam.created_at.strftime(Settings.format_date) %></td>
             <td class="col-md-2"><%= exam.subject.name %></td>
             <td class="col-md-2"><%= exam.status %></td>
             <td class="col-md-1"><%= exam.subject.duration %></td>
             <td class="col-md-1"><%= exam.subject.question_number %></td>
-            <td class="col-md-1"><%= exam.spent_time %></td>
+            <td class="col-md-1">
+              <%= format_spent_time exam.spent_time %>
+            </td>
             <td class="col-md-1">
             <% unless exam.checked? %>
               <%= t(".no_score") %>
             <% else %>
-            <%= t(."score_here") %>
+              <%=  %>
             <% end %>
             </td>
             <th class="col-md-2 option-product-admin">
               <% if exam.uncheck? || exam.checked? %>
-                <%= link_to "#", class: "btn btn-default button-1" do %>
-                    <i class="fa fa-eye"><%= t(".view") %></i>
+                <%= link_to exam_path(exam), class: "btn btn-default button-1" do %>
+                    <i class="fa fa-eye"><%= t ".view" %></i>
                 <% end %>
               <% else %>
-                <%= link_to "#", class: "btn btn-default button-1" do %>
-                  <i class="fa fa-play"><%= t(".start") %></i>
+                <%= link_to exam_path(exam), class: "btn btn-default button-1" do %>
+                  <i class="fa fa-play"><%= t ".start" %></i>
                 <% end %>
               <% end %>
             </th>

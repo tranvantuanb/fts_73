@@ -1,0 +1,50 @@
+<%= javascript_include_tag "timer", "data-turbolinks-track": "load" %>
+
+<div class="row exam">
+  <div class="col-md-12">
+    <div class="title"><%= @exam.created_at.strftime Settings.format_date %></div>
+    <br>
+    <h2 class="text-center"><%= @exam.subject.name %></h2>
+    <%= hidden_field :exam, :id %>
+    <%= hidden_field :exam, :status %>
+    <%= hidden_field :exam, :updated_at %>
+    <%= hidden_field :subject, :duration, value: @exam.subject.duration %>
+    <div id="timer">
+      <h4><%= t ".time_remaining" %></h4>
+
+      <span class="hours"></span> :
+      <span class="minutes"></span> :
+      <span class="seconds"></span>
+    </div>
+    <hr>
+    <div class="question-answer">
+      <%= form_for @exam, html: {name: "show_exam"} do |f| %>
+        <%= f.fields_for :results do |ff| %>
+          <ol>
+            <h3><%= ff.object.question.content %></h3>
+            <ul>
+              <% ff.object.question.answers.each do |ans| %>
+              <li>
+                <label class="radio-inline">
+                <% if @exam.checked? || @exam.uncheck? %>
+                  <%= ff.radio_button :answer_id, ans.id, disabled: true %>
+                <% else %>
+                  <%= ff.radio_button :answer_id, ans.id %>
+                <% end %>
+                  <%= ans.content %>
+                </label>
+              </li>
+              <% end %>
+            </ul>
+          </ol>
+        <% end %>
+        <% unless @exam.checked? || @exam.uncheck? %>
+          <%= f.submit t(".finish"), method: :update,
+            data: {confirm: t(".are_you_sure")}, class: "btn-finish",
+            id: "btn_finish" %>
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
