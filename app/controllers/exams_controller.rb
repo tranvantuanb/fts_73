@@ -27,6 +27,7 @@ class ExamsController < ApplicationController
     params[:exam][:status] = :uncheck
 
     if @exam.update_attributes exam_params
+      ExamWorker.perform_async
       redirect_to exams_path
     else
       flash[:danger] = t(".update_faild")

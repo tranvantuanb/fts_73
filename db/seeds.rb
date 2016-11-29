@@ -13,6 +13,14 @@ User.create(
   phone_number: "0987654321",
   role: 1)
 
+User.create(
+  name: "Admin",
+  email: "abc@gmail.com",
+  address: "ha noi",
+  password: "123456",
+  phone_number: "0987654320",
+  role: 1)
+
 (1..10).each do |n|
   User.create(
     name: "user#{n}",
