@@ -21,6 +21,7 @@ gem "bootstrap-kaminari-views"
 gem "sidekiq"
 gem "letter_opener"
 gem "launchy"
+gem "whenever", require: false
 
 group :development, :test do
   gem "byebug", platform: :mri

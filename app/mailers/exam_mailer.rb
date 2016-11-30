@@ -10,4 +10,14 @@ class ExamMailer < ApplicationMailer
     @user = @exam.user
     mail to: @user.email, subject: "Result Achievement"
   end
+
+  def statistic_result
+    @admins = User.admin
+    mail to: @admins.map(&:email).uniq, subject: "Monthly Statistic"
+  end
+
+  def notice_overtime member_id
+    @user = User.find_by id: member_id
+    mail to: @user.email, subject: "Overtime to do exam"
+  end
 end

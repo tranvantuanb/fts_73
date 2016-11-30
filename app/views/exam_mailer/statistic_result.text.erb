@@ -1,0 +1,7 @@
+Hi trainer
+We have the statistic in this month as below:
+=======================================
+Total exams: <%= Exam.exams_per_month.count %>
+Total subjects: <%= Exam.exams_per_month.distinct.count(:subject_id) %>
+Total exam's score greater than 5 : <%= Exam.score_greater_than 5 %>
+=======================================

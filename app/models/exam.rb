@@ -8,9 +8,14 @@ class Exam < ApplicationRecord
   accepts_nested_attributes_for :results
 
   after_create :create_result
+  scope :exams_per_month, -> {
+    where(created_at: Time.now.all_month()) }
+  scope :score_greater_than, -> score {
+    where(created_at: Time.now.all_month()).count
+  }
   paginates_per 10
 
-   def caculate_score
+  def caculate_score
     score = 0
     self.results.each do |result|
       unless result.answer.nil?

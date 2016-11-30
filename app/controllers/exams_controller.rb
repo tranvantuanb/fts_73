@@ -12,6 +12,7 @@ class ExamsController < ApplicationController
   def create
     @exam  = current_user.exams.build exam_params
     if @exam.save
+      NoticeWorker.perform_at(Time.zone.now + Settings.delay_time.hours, current_user.id)
       flash[:success] = t ".create_exam_successful"
       redirect_to exams_path
     else
