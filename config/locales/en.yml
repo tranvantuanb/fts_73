@@ -53,6 +53,10 @@ en:
       contact: "Contact"
       login: "Login"
       signup: "Sign up"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
     footer:
       f_exam: "F-Exam"
       author: "Tran Van Tuan"
@@ -67,6 +71,7 @@ en:
       suggestions: "Suggestions"
       users: "Users"
       subjects: "Subjects"
+      log_info: "Log Info"
   static_pages:
     home:
       home: "Home"
@@ -110,6 +115,10 @@ en:
         view: "View"
       show:
         finish: "Submit"
+    logs:
+      index:
+        signin_at: "Sign in at:"
+        last_signout_at: "Last sign out at:"
   shared:
     search_questions:
       enter_content_question: "Enter question content"
@@ -138,3 +147,6 @@ en:
   twenty_four: 24
   negative_two: -2
   ten: 10
+  sessions:
+    create:
+      invalid_email_password: "Invalid email or password"

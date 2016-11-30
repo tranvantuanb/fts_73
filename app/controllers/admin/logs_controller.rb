@@ -1,4 +1,4 @@
-class Admin::HomeController < ApplicationController
+class Admin::LogsController < ApplicationController
   before_action :require_admin
   layout "admin"
 

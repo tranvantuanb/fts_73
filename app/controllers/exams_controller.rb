@@ -1,6 +1,5 @@
 class ExamsController < ApplicationController
   load_and_authorize_resource
-  before_action :authenticate_user!
   before_action :update_status, only: [:show]
 
   def index

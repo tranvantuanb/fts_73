@@ -1,0 +1,23 @@
+<div class="col-md-12">
+  <table class="cart table table-hover new-order">
+    <thead>
+      <tr class="info row">
+        <th class="col-md-3"><%= t ".signin_at" %></th>
+        <th class="col-md-3"><%= t ".last_signout_at" %></th>
+        <th class="col-md-6"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row">
+        <td class="col-md-3">
+          <%= current_user.current_sign_in_at
+            .strftime(Settings.format_date) %>
+        </td>
+        <td class="col-md-3">
+          <%= current_user.last_sign_in_at.strftime(Settings.format_date) %>
+        </td>
+        <td class="col-md-6"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
