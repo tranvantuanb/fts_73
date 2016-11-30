@@ -26,7 +26,7 @@
             </ul>
           </ol>
         <% end %>
-        <% unless @exam.checked? %>
+        <% unless @exam.checked? || @exam.start?%>
         <%= f.submit t(".finish"), class: "btn-finish"%>
         <% end %>
       <% end %>

@@ -1,0 +1,10 @@
+<h2>Hi trainer</h2>
+<div>
+  <p>We would like to inform the statistic in this month as below:</p>
+  <p>=======================================</p>
+  <p>Total exams: <%= Exam.exams_per_month.count %></p>
+  <p>Total subjects: <%= Exam.exams_per_month.distinct.count(:subject_id) %></p>
+  <p>Exam's score greater than 5 : <%= Exam.score_greater_than 5 %></p>
+  <p>=======================================</p>
+  <p>Thanks for your training at Framgia VN</p>
+</div>
