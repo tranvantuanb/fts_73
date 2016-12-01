@@ -1,4 +1,7 @@
 class Exam < ApplicationRecord
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged
+
   enum status: [:start, :testing, :uncheck, :checked]
   belongs_to :user, class_name: User.name
   belongs_to :subject, class_name: Subject.name
@@ -23,6 +26,12 @@ class Exam < ApplicationRecord
       end
     end
     score
+  end
+
+  def slug_candidates
+    [
+      [:id, self.subject.name]
+    ]
   end
 
   private

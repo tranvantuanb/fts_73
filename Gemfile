@@ -22,6 +22,7 @@ gem "sidekiq"
 gem "letter_opener"
 gem "launchy"
 gem "whenever", require: false
+gem "friendly_id", "~> 5.1.0"
 
 group :development, :test do
   gem "byebug", platform: :mri
