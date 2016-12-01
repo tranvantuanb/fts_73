@@ -90,15 +90,7 @@ en:
         user_id: "User ID"
         user_name: "User Name"
         v_v: "..."
-      exams:
-      index:
-        create_exam: "Create exam"
-        list_exams: "List Of Exam"
-        start: "Start"
-        view: "View"
-        require_login: "You have to login first!"
-        colon: ":"
-        zero: "0"
+        user_not_exist: "Not exist"
     exams:
       index:
         list_exams: "List Exams"
@@ -114,6 +106,12 @@ en:
         view: "View"
       show:
         finish: "Submit"
+    users:
+      index:
+        delete_confirm: "Are you sure to delete?"
+      destroy:
+        destroy_error: "Delete error!"
+        destroy_success: "Deleted successful!"
   shared:
     search_questions:
       enter_content_question: "Enter question content"
@@ -149,3 +147,6 @@ en:
       email: "Email"
       address: "Address"
       phone_number: "Phone Number"
+  sessions:
+    create:
+      invalid_email_password: "Invalid email or password!"

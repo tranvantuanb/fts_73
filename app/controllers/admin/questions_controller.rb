@@ -1,5 +1,5 @@
 class Admin::QuestionsController < ApplicationController
-  #before_action :require_admin
+  before_action :require_admin
   layout "admin"
 
   def index

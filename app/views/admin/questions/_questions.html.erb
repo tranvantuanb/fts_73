@@ -23,7 +23,11 @@
           <td class="col-md-3"><%= question.content[0..60] %>
             <%= t(".v_v") %></td>
           <td class="col-md-q"><%= question.user_id %></td>
-          <td class="col-md-2"><%= question.user.name %></td>
+          <% if question.user.present? %>
+            <td class="col-md-2"><%= question.user.name %></td>
+          <% else %>
+            <td class="col-md-2"><%= t ".user_not_exist" %></td>
+          <% end %>
           <th class="col-md-2 option-product-admin">
             <%= link_to edit_admin_question_path(question),
               class: "btn btn-default button-1" do %>
