@@ -114,6 +114,9 @@ en:
         view: "View"
       show:
         finish: "Submit"
+    statistic:
+      index:
+        score: "Score"
   shared:
     search_questions:
       enter_content_question: "Enter question content"
@@ -149,3 +152,8 @@ en:
       email: "Email"
       address: "Address"
       phone_number: "Phone Number"
+  score_percent: "Total score %"
+  score_statistics: "Score Statistic"
+  vertical: "vertical"
+  right: "right"
+  middle: "middle"

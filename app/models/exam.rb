@@ -34,6 +34,15 @@ class Exam < ApplicationRecord
     ]
   end
 
+  def self.statistic_score
+    scores = Exam.all.map(&:score)
+    statistic_score = []
+    (0..Subject.maximum(:question_number)).each do |n|
+      statistic_score << (Exam.where(score: n).count * 100 / (Exam.count * 1.0)).round(2)
+    end
+    statistic_score
+  end
+
   private
   def create_result
     subject.questions.sample(subject.question_number).each do |question|
