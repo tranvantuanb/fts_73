@@ -1,0 +1,21 @@
+<h2 class="text-center"><%= t ".profile" %></h2>
+<div id="table-exams">
+  <table class="cart table table-hover new-order">
+    <thead>
+      <tr class="info row">
+        <th class="col-md-3"><%= t ".name" %></th>
+        <th class="col-md-3"><%= t ".email" %></th>
+        <th class="col-md-3"><%= t ".address" %></th>
+        <th class="col-md-3"><%= t ".phone_number" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row">
+        <td class="col-md-3"><%= @user.name %></td>
+        <td class="col-md-3"><%= @user.email %></td>
+        <td class="col-md-3"><%= @user.address %></td>
+        <td class="col-md-3"><%= @user.phone_number %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -53,6 +53,10 @@ en:
       contact: "Contact"
       login: "Login"
       signup: "Sign up"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
     footer:
       f_exam: "F-Exam"
       author: "Tran Van Tuan"
@@ -138,3 +142,10 @@ en:
   twenty_four: 24
   negative_two: -2
   ten: 10
+  users:
+    show:
+      profile: "Profile"
+      name: "Name"
+      email: "Email"
+      address: "Address"
+      phone_number: "Phone Number"
