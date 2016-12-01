@@ -28,7 +28,7 @@
             </td>
             <td class="col-md-2"><%= exam.user.name %></td>
             <th class="col-md-2 option-product-admin">
-              <%= link_to admin_exam_path(exam),
+              <%= link_to admin_exam_path(exam.id),
                 class: "btn btn-default button-1" do %>
                   <i class="fa fa-eye"><%= t(".view") %></i>
                 <% end %>

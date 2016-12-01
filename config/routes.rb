@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {registrations: "registrations"}
+  devise_for :users, controllers: {registrations: "registrations",
+    sessions: "sessions"}
   resources :users, only: :show
 
   root "exams#index"
 
   namespace :admin do
-    root "home#index"
+    root "admins#index", as: :root
     resources :subjects, :questions, :users, :exams
     resources :statistic
   end

@@ -45,11 +45,11 @@
             </td>
             <th class="col-md-2 option-product-admin">
               <% if exam.uncheck? || exam.checked? %>
-                <%= link_to exam_path(exam), class: "btn btn-default button-1" do %>
+                <%= link_to exam_path(exam.id), class: "btn btn-default button-1" do %>
                     <i class="fa fa-eye"><%= t ".view" %></i>
                 <% end %>
               <% else %>
-                <%= link_to exam_path(exam), class: "btn btn-default button-1" do %>
+                <%= link_to exam_path(exam.id), class: "btn btn-default button-1" do %>
                   <i class="fa fa-play"><%= t ".start" %></i>
                 <% end %>
               <% end %>

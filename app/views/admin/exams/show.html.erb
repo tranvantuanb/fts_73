@@ -3,7 +3,7 @@
     <h2 class="text-center"><%= @exam.subject.name %></h2>
     <hr>
     <div class="question-answer">
-      <%= form_for [:admin, @exam] do |f| %>
+      <%= form_for [:admin, @exam], url: admin_exam_path(@exam.id) do |f| %>
         <%= f.fields_for :results do |ff| %>
           <ol>
             <h3><%= ff.object.question.content %></h3>

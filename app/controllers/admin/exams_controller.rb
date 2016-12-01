@@ -4,7 +4,7 @@ class Admin::ExamsController < ApplicationController
 
   def index
     @subjects = Subject.all
-    @exams = Exam.all.order(updated_at: :desc).page params[:page]
+    @exams = Exam.friendly.order(updated_at: :desc).page params[:page]
   end
 
   def show

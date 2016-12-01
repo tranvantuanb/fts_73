@@ -1,10 +1,10 @@
 class Ability
   include CanCan::Ability
 
-  def initialize user
-    user ||= User.new
-    if user.admin?
-      can :manage, :all
+  def initialize user, controller_namespace
+    case controller_namespace
+    when "Admin"
+      can :manage, :all if user.admin?
     else
       can :read, :all
       can :manage, User

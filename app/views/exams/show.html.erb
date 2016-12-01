@@ -18,21 +18,37 @@
     </div>
     <hr>
     <div class="question-answer">
-      <%= form_for @exam, html: {name: "show_exam"} do |f| %>
+      <%= form_for @exam, url: exam_path(@exam.id),
+        html: {name: "show_exam"} do |f| %>
         <%= f.fields_for :results do |ff| %>
           <ol>
             <h3><%= ff.object.question.content %></h3>
             <ul>
               <% ff.object.question.answers.each do |ans| %>
               <li>
-                <label class="radio-inline">
-                <% if @exam.checked? || @exam.uncheck? %>
-                  <%= ff.radio_button :answer_id, ans.id, disabled: true %>
+                <% if @exam.checked? %>
+                  <% if ans.is_correct? %>
+                    <label class="radio-inline-correct">
+                      <%= ff.radio_button :answer_id, ans.id, disabled: true %>
+                        <%= ans.content %>
+                    </label>
+                  <% else %>
+                    <label class="radio-inline">
+                      <%= ff.radio_button :answer_id, ans.id, disabled: true %>
+                        <%= ans.content %>
+                    </label>
+                  <% end %>
+                <% elsif @exam.uncheck? %>
+                  <label class="radio-inline">
+                    <%= ff.radio_button :answer_id, ans.id, disabled: true %>
+                    <%= ans.content %>
+                  </label>
                 <% else %>
-                  <%= ff.radio_button :answer_id, ans.id %>
+                  <label class="radio-inline">
+                    <%= ff.radio_button :answer_id, ans.id %>
+                    <%= ans.content %>
+                  </label>
                 <% end %>
-                  <%= ans.content %>
-                </label>
               </li>
               <% end %>
             </ul>

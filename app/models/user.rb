@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
+  acts_as_paranoid
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   enum role: [:member, :admin]

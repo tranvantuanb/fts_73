@@ -23,6 +23,7 @@ gem "letter_opener"
 gem "launchy"
 gem "whenever", require: false
 gem "friendly_id", "~> 5.1.0"
+gem "paranoia", "~> 2.2"
 
 group :development, :test do
   gem "byebug", platform: :mri
