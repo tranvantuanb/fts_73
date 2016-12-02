@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 en:
   devise:
+    admin: "Admin"
     sessions:
       new:
         log_in: "Log in"
@@ -90,15 +91,7 @@ en:
         user_id: "User ID"
         user_name: "User Name"
         v_v: "..."
-      exams:
-      index:
-        create_exam: "Create exam"
-        list_exams: "List Of Exam"
-        start: "Start"
-        view: "View"
-        require_login: "You have to login first!"
-        colon: ":"
-        zero: "0"
+        user_not_exist: "Not exist"
     exams:
       index:
         list_exams: "List Exams"
@@ -117,6 +110,12 @@ en:
     statistic:
       index:
         score: "Score"
+    users:
+      index:
+        delete_confirm: "Are you sure to delete?"
+      destroy:
+        destroy_error: "Delete error!"
+        destroy_success: "Deleted successful!"
   shared:
     search_questions:
       enter_content_question: "Enter question content"
@@ -157,3 +156,7 @@ en:
   vertical: "vertical"
   right: "right"
   middle: "middle"
+  sessions:
+    create:
+      invalid_email_password: "Invalid email or password!"
+  access_denied: "Access denied. You are not authorized to access the requested page."

@@ -2,9 +2,10 @@ name_size_max: 45
 email_length: 45
 password_min: 6
 content_size_max: 250
-format_date: "%Y-%m-%d %I:%m %p"
+format_date: "%d-%m-%Y %I:%m %p"
 one_thousand: 1000
 sixty: 60
 twenty_four: 24
 limited_time: 30
 delay_time: 8
+number_ten: 10
