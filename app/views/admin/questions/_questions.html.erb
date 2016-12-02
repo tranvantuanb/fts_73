@@ -4,14 +4,15 @@
       <tr class="info row">
         <th class="col-md-1"><%= t ".id" %></th>
         <th class="col-md-2"><%= t ".subject" %></th>
-        <th class="col-md-3">
+        <th class="col-md-2">
           <span class="product-cart-description">
             <%= t ".content" %>
           </span>
         </th>
         <th class="col-md-1"><%= t ".user_id" %></th>
         <th class="col-md-3"><%= t ".user_name" %></th>
-        <th class="col-md-2"></th>
+        <th class="col-md-1"><%= t ".status" %></th>
+        <th class="col-md-1"></th>
       </tr>
     </thead>
     <tbody>
@@ -20,12 +21,19 @@
           <td class="col-md-1"><%= question.id %></td>
           <td class="col-md-2">
             <%= question.subject.name %></td>
-          <td class="col-md-3"><%= question.content[0..60] %>
+          <td class="col-md-2"><%= question.content[0..60] %>
             <%= t(".v_v") %></td>
           <td class="col-md-q"><%= question.user_id %></td>
-          <td class="col-md-2">
-            <%= question.user.present? ? question.user.name : t(".user_not_exist") %>
-          </td>
+          <% if question.user.present? %>
+            <td class="col-md-2"><%= question.user.name %></td>
+          <% else %>
+            <td class="col-md-2"><%= t ".user_not_exist" %></td>
+          <% end %>
+          <% if question.status %>
+            <td class="col-md-1"><%= t ".active" %></td>
+          <% else %>
+            <td class="col-md-1"><%= t ".inactive" %></td>
+          <% end %>
           <th class="col-md-2 option-product-admin">
             <%= link_to edit_admin_question_path(question),
               class: "btn btn-default button-1" do %>

@@ -45,7 +45,8 @@ class Exam < ApplicationRecord
 
   private
   def create_result
-    subject.questions.sample(subject.question_number).each do |question|
+    subject.questions.where(status: true)
+      .sample(subject.question_number).each do |question|
       self.results.create question_id: question.id
     end
   end

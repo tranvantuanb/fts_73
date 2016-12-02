@@ -92,6 +92,22 @@ en:
         user_name: "User Name"
         v_v: "..."
         user_not_exist: "Not exist"
+        delete_confirm: "Are you sure?"
+        active: "Active"
+        inactive: "Inactive"
+      form:
+        save: "Save"
+        add_more: "Add More"
+        remove: "Remove"
+      create:
+        create_success: "Created successful!"
+        fail: "Is correct/content not be fill or answers quantity not correct!"
+      destroy:
+        destroy_success: "Deleted successful!"
+      edit:
+        save: "Save"
+      update:
+        update_success: "Updated success!"
     exams:
       index:
         list_exams: "List Exams"

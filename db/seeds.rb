@@ -43,7 +43,15 @@ end
     content: "Question #{n}",
     subject_id: 1,
     user_id: n,
-    status: 1)
+    status: true)
+end
+
+(1..10).each do |n|
+  Question.create(
+    content: "Question inactive",
+    subject_id: 1,
+    user_id: n,
+    status: false)
 end
 
 (1..10).each do |n|
@@ -51,7 +59,7 @@ end
     content: "Do u have #{n} variables?",
     subject_id: 2,
     user_id: n,
-    status: 1)
+    status: true)
 end
 
 (1..10).each do |n|
@@ -59,7 +67,7 @@ end
     content: "What is the value of params #{n}?",
     subject_id: 3,
     user_id: n,
-    status: 1)
+    status: true)
 end
 
 (1..10).each do |n|
@@ -67,7 +75,7 @@ end
     content: "How about the performance of #{n} loops?",
     subject_id: 4,
     user_id: n,
-    status: 1)
+    status: true)
 end
 
 (1..3).each do |n|

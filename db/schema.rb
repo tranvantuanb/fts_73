@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201075838) do
+ActiveRecord::Schema.define(version: 20161202033320) do
+
   create_table "answers", force: :cascade do |t|
     t.string   "content"
-    t.boolean  "is_correct"
+    t.boolean  "is_correct",  default: false
     t.integer  "question_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "exams", force: :cascade do |t|
@@ -35,9 +36,11 @@ ActiveRecord::Schema.define(version: 20161201075838) do
     t.string   "content"
     t.integer  "subject_id"
     t.integer  "user_id"
-    t.integer  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "status",     default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_questions_on_deleted_at"
   end
 
   create_table "results", force: :cascade do |t|

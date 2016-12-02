@@ -173,12 +173,19 @@ th.col-md-2.option-product-admin {
   color: white;
 }
 
-.color-form {
+.answer-form {
   background: rgba(204, 204, 204, 0.18);
   padding: 10px;
+  margin-right: 160px;
 }
 
-.color-form .form-group {
+.answer-form h2.text-center.new-color {
+  font-size: 22px;
+  float: left;
+  margin-bottom: 6px;
+}
+
+.answer-form .form-group {
   clear: both;
 }
 
@@ -264,4 +271,10 @@ ul {
 
 label.radio-inline-correct {
   background-color: $green_high;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 0 0;
+  line-height: normal;
+  margin-top: 10px;
 }
